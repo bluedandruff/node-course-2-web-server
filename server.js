@@ -33,6 +33,17 @@ hbs.registerHelper('screamIt', (text)=>{
     return text.toUpperCase();
 })
 
+hbs.registerHelper('projectMessage', (text)=>{
+    return text.toUpperCase()
+})
+
+app.get('/project', (req, res)=>{
+    res.render('project.hbs', {
+        welcomeMessage: 'This is a test message for project. I really have nothing to say.',
+        pageTitle: 'Example Title', 
+    })
+})
+
 app.get('/', (req, res)=>{
     res.render('home.hbs', {
         welcomeMessage: 'Welcome to the test page',
