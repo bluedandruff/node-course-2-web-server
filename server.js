@@ -39,7 +39,6 @@ hbs.registerHelper('projectMessage', (text)=>{
 
 app.get('/projects', (req, res)=>{
     res.render('projects.hbs', {
-        welcomeMessage: 'This is a test message for project. I really have nothing to say.',
         pageTitle: 'Projects', 
     })
 })
